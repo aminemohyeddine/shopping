@@ -1,0 +1,328 @@
+.navBarContainer {
+  width: 100%;
+  position: sticky;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cccccc;
+  top: 0;
+  left: 0;
+  height: 25vh;
+  background-color: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background: #ffffff;
+  padding-left: 5%;
+  height: 20vh;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.logoLinkContainer {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar__logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2a9986;
+  font-family: "Brush Script MT", cursive;
+  margin-bottom: 7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBarUnderLogoText {
+  color: rgb(74, 74, 74);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBarIconsContainer {
+  height: 100%;
+  display: flex;
+  width: 130px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+  display: relative;
+}
+
+.userIconContainer {
+  width: 40px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.userIcon {
+  font-size: 1.8rem;
+}
+
+.heartIconContainer,
+.shoppingIconContainer {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cartIcon {
+  font-size: 1.8rem;
+}
+.cartIcon:hover {
+  cursor: pointer;
+  color: #2a9986;
+}
+
+.heartIcon {
+  font-size: 1.9rem;
+}
+.heartIcon:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.userIcon:hover {
+  cursor: pointer;
+  color: #2a9986;
+}
+
+.userIcon {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.userLinks {
+  position: absolute;
+  height: 70px;
+  width: 120px;
+  background-color: rgb(255, 255, 255);
+  top: 50px;
+  right: 20px;
+  border: 1px solid rgb(180, 180, 180);
+}
+
+.userLinksContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.signUpIcon {
+  font-size: 1rem;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.signInIcon {
+  font-size: 1rem;
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.userLogin {
+  margin-bottom: 5px;
+  width: fit-content;
+}
+.userLogin:hover > .signInIcon,
+.userLogin:hover > .logino {
+  cursor: pointer;
+  color: #289381;
+}
+
+.userLogin:hover {
+  cursor: pointer;
+}
+.userSignUp {
+  width: fit-content;
+}
+.userSignUp:hover > .signUpIcon,
+.userSignUp:hover > .signIno {
+  cursor: pointer;
+  color: #289381;
+}
+
+.cartCount {
+  position: absolute;
+  font-size: 1rem;
+  color: #289381;
+  top: -12px;
+  left: 15px;
+}
+
+.optionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 5vh;
+}
+
+.categoriess {
+  width: fit-content;
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+.categoriess:hover {
+  cursor: pointer;
+}
+.categoriess > p {
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.categoriesDisplay {
+  height: 0px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(173, 173, 173);
+  position: absolute;
+  border-bottom: 1px solid rgb(173, 173, 173);
+  animation: animatename 0.2s forwards;
+  width: 100%;
+}
+
+@keyframes animatename {
+  from {
+    height: 0;
+  }
+  to {
+    height: 300px;
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.categoriesDisplayOff {
+  height: 300px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: animatenameOff 0.2s forwards;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes animatenameOff {
+  from {
+    height: 300px;
+  }
+  to {
+    height: 0px;
+  }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 870px) {
+  .logoLinkContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  .navBarUnderLogoText {
+    color: rgb(74, 74, 74);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar__logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2a9986;
+    font-family: "Brush Script MT", cursive;
+    margin-bottom: 7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navBarIconsContainer {
+    height: 100%;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    display: relative;
+  }
+}
+@media (max-width: 550px) {
+  .optionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 5vh;
+  }
+}

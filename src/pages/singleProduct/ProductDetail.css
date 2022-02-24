@@ -1,0 +1,181 @@
+.productContainer {
+  display: flex;
+  padding: 30px 30px 30px 30px;
+}
+.infoContainer {
+  width: 35%;
+}
+
+.productImageContainer {
+  width: 50%;
+  height: 60vh;
+  padding: 30px 30px 30px 30px;
+}
+
+.productImage {
+  height: 50vh;
+  width: 100%;
+}
+
+.itemTitle {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+.category {
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  color: rgb(158, 158, 158);
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+  margin-bottom: 30px;
+}
+
+.itemPrice {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.gif-container {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoDetail {
+  font-size: 2rem;
+  width: 100%;
+  height: fit-content;
+  line-height: 1em;
+  margin-bottom: 80px;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+.quantityContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.quantityText {
+  font-size: 2rem;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.addButton {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+  background-color: white;
+  color: black;
+  border: solid 1px #289381;
+
+  background: linear-gradient(to left, transparent 50%, #289381 50%) right;
+  background-size: 200%;
+  transition: 0.2s ease-out;
+}
+
+.addButton:hover {
+  color: white;
+  background-position: left;
+}
+
+/* COMMENT SECTION */
+.commentSectionContainer {
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  border: solid 1px blue;
+}
+.commentSectionTitle {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+.commentFormContainer {
+  width: 80%;
+  height: 10vh;
+  border: 1px solid black;
+}
+
+.commentInput {
+  border: none;
+  width: 65%;
+  margin-right: 5%;
+  margin-left: 5%;
+  height: 7vh;
+  border: solid 2px blue;
+}
+
+.commentInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.commentAddButton {
+  width: 20%;
+  margin-right: 5%;
+  height: 7vh;
+}
+
+.allCommentsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentContainer {
+  width: 100%;
+  display: flex;
+  border: solid 2px #289381;
+}
+.commentUserImage {
+  width: 90px;
+  background-color: #289381;
+  padding: 10px;
+}
+
+.commentDetails {
+  padding: 10px;
+}
+.commentUserName {
+  color: #289381;
+  height: 5vh;
+  cursor: pointer;
+}
+.commentDescription {
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.commentStars {
+  height: 5vh;
+  margin-bottom: 10px;
+}
+@media (max-width: 800px) and (max-width: 1200px) {
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    width: 100%;
+  }
+  .productImageContainer {
+    width: 100%;
+    height: 60vh;
+    padding: 30px 30px 30px 30px;
+  }
+  .infoContainer {
+    width: 90%;
+
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}

@@ -1,0 +1,195 @@
+.CartNavBarContainerOff {
+  height: 100vh;
+  width: 350px;
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+  right: 0;
+  border-left: 1px solid rgb(192, 192, 192);
+  background-color: #ffffff;
+  animation: mymoveoff 1s forwards;
+}
+@keyframes mymoveoff {
+  from {
+    right: -0px;
+  }
+  to {
+    right: -450px;
+  }
+}
+
+.cartNavBarHeader {
+  height: 9vh;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+}
+.cartNavBarHeader > p {
+  margin-top: 20px;
+  font-size: 1.8rem;
+}
+
+.closeCartBarIcon {
+  color: black;
+  font-size: 2.5rem;
+}
+
+.closeCartBarIcon:hover {
+  color: black;
+  font-size: 2.5rem;
+  color: #2a9986;
+  cursor: pointer;
+}
+
+.CartNavBarContainer {
+  width: 350px;
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+  right: -450px;
+  border-left: 1px solid black;
+  background-color: #ffffff;
+  animation: mymoveofff 1s forwards;
+  overflow: auto;
+  height: 100vh;
+  max-height: 100vh;
+}
+@keyframes mymoveofff {
+  from {
+    right: -450px;
+  }
+  to {
+    right: -0px;
+  }
+}
+
+.emptyCartContainer {
+  height: 91vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.emptyCartIconContainer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.emptyCartIcon {
+  color: #2a9986;
+  font-size: 4rem;
+}
+.emptyCartText {
+  height: 15vh;
+  width: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.emptyCartText > p {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-align: center;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #4a4a4a;
+}
+.emptyCartContinueButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.continueButton {
+  border: none;
+  background-color: white;
+  border: #2a9986 2px solid;
+  width: 80%;
+  padding: 10px 0px 10px 0px;
+  color: #2a9986;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+.continueButton:hover {
+  cursor: pointer;
+  box-shadow: inset;
+}
+.cartItemDeleteButton {
+  color: #2a9986;
+}
+.cartItemDeleteButton:hover {
+  color: #fb0000;
+  cursor: pointer;
+}
+.confirmSection {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 6vh;
+  color: #2a9986;
+  border: 1px solid #2a9986;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.purchase:hover {
+  color: #2a9986;
+}
+
+.totalPriceContainer {
+  height: 8vh;
+  width: 100%;
+}
+.totalPriceLine {
+  height: 1px;
+  width: 100%;
+  background-color: #a7a7a7;
+}
+
+.totalPriceItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.greyHeader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 100000000;
+  top: 0px;
+  opacity: 0.5;
+}

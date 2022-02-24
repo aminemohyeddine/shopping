@@ -1,0 +1,122 @@
+.cartItemContainer {
+  width: 90%;
+  height: 22vh;
+  border: 1px solid #adadad;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+.topCartItemContainer {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+}
+.bottomCartItemContainer {
+  border-top: solid rgb(177, 177, 177) 1px;
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+}
+
+.cartItemImageContainer {
+  height: 13vh;
+  width: 30%;
+}
+.cartItemImage {
+  height: 14.7vh;
+  width: 100%;
+}
+
+.cartItemInfos {
+  width: 70%;
+}
+
+.cartItemInfos {
+  height: 13vh;
+  width: 90%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 5%;
+  margin-left: 5%;
+}
+
+.cartItemTitleDeleteSection {
+  width: 90%;
+  margin-right: 10%;
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleSection > p {
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #4a4a4a;
+}
+
+.titleLink {
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+}
+
+.availableDiv {
+  width: 90px;
+  background-color: #e6fdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.availableIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.cartItemAvailableIcon {
+  font-size: 0.6rem;
+  color: #2a9986;
+}
+
+.availableText {
+  color: #2a9986;
+  font-size: 1rem;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+.cartItemPrice {
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartItemPrice > p {
+  color: #000000;
+  font-size: 1.2rem;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.cartItemPrice > span {
+  color: #2a9986;
+  font-size: 1rem;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.availableContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}

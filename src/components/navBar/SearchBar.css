@@ -1,0 +1,72 @@
+.searchBarContainer {
+  position: absolute;
+  width: 200px;
+  height: 45px;
+  overflow: hidden;
+  border: none;
+  z-index: 100000;
+  right: 170px;
+  background-color: white;
+  right: 200px;
+  top: 30px;
+}
+
+.searchBarContainer input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  background-color: transparent;
+}
+.searchBarContainer label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.searchBarContainer label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #289381;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.searchBarContent {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.searchBarContainer input:focus {
+  outline: none;
+}
+.searchBarContainer input:focus + .searchBarLabel .searchBarContent,
+.searchBarContainer input:valid + .searchBarLabel .searchBarContent {
+  transform: translateY(-70%);
+  font-size: 14px;
+  left: 0px;
+  color: #fce38a;
+}
+.inp:focus ~ .searchBarContainer {
+  background-color: aqua;
+  width: 900px;
+}
+.searchBarContainer input:focus + .searchBarLabel::after,
+.searchBarContainer input:valid + .searchBarLabel::after {
+  transform: translateX(0%);
+}
+@media (max-width: 870px) {
+  .searchBarContainer {
+    display: none;
+  }
+}

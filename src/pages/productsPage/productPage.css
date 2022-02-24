@@ -1,0 +1,23 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.productSearch {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.top-products {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.top-products > span {
+  font-size: 2rem;
+}
