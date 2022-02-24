@@ -256,6 +256,7 @@ export const SignUp = () => {
                   <TextField
                     required
                     fullWidth
+                    autoComplete="current-password"
                     name="password"
                     label="Password"
                     type="password"
