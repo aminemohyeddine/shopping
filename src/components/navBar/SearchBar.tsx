@@ -4,6 +4,8 @@ import { getSearchProduct } from "../../redux/actions/productActions/productActi
 import "./SearchBar.css";
 import { ProductInterface } from "../../interfaces/productsInterfaces";
 import { useAppSelector } from "../../redux/hooks";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 
 interface Props {
   searchItem: boolean;
@@ -34,7 +36,7 @@ export const SearchBar: React.FC<Props> = ({ searchItem, setSearchItem }) => {
     setSearchItem(true);
   };
 
-  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeHandler = (e: any) => {
     setSearch(e.target.value);
   };
 
@@ -56,31 +58,20 @@ export const SearchBar: React.FC<Props> = ({ searchItem, setSearchItem }) => {
 
   return (
     <>
-      {/* <div className="form">
-        <input onChange={changeHandler} type="text" name="text" />
-        <label htmlFor="text" className="label-name">
-          <span className="content-name">Your Text</span>
-        </label>
-        
-      </div> */}
-      <div className="searchBarContainer">
-        <input
-          style={{ color: "#000000" }}
+      <Grid item xs={4} sm={4}>
+        <TextField
+          style={{ color: "red" }}
+          id="searchInput"
+          name="searchInput"
+          label="search a product"
+          fullWidth
           onChange={(e) => {
             changeHandler(e);
           }}
-          type="text"
-          name="text"
-          autoComplete="off"
-          required
-          className="inp"
+          autoComplete="given-name"
+          variant="standard"
         />
-        <label htmlFor="text" className="searchBarLabel">
-          <span style={{ color: "#289381" }} className="searchBarContent">
-            search for a product
-          </span>
-        </label>
-      </div>
+      </Grid>
     </>
   );
 };

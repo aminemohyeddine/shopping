@@ -135,8 +135,6 @@ function App() {
         setShowSideBar={setShowSideBar}
         itemsShow={itemsShow}
         setItemsShow={setItemsShow}
-        searchItem={searchItem}
-        setSearchItem={setSearchItem}
         user={user}
         setUser={setUser}
         isUserAuth={isUserAuth}

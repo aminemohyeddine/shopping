@@ -1,4 +1,4 @@
-import { SetStateAction, Dispatch, useState, useEffect } from "react";
+import { SetStateAction, Dispatch, useState } from "react";
 //material ui
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -14,17 +14,13 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import * as yup from "yup";
-import "./LoginPage.scss";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { useFormik } from "formik";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextField from "@mui/material/TextField";
 //interfaces
 import { UserInterface } from "../../interfaces/userIntarfaces";
-
-import { faStore } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   tokenExpired: boolean;

@@ -95,18 +95,17 @@
   width: 100%;
   height: fit-content;
   padding: 20px;
-  border: solid 1px blue;
 }
 .commentSectionTitle {
+  display: flex;
   font-size: 1.7rem;
   margin-bottom: 20px;
 }
 .commentFormContainer {
-  width: 80%;
-  height: 10vh;
-  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .commentInput {
   border: none;
   width: 65%;
@@ -133,32 +132,49 @@
 }
 
 .commentContainer {
-  width: 100%;
+  width: 50%;
   display: flex;
-  border: solid 2px #289381;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+  border-radius: 10px;
 }
 .commentUserImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
-  background-color: #289381;
-  padding: 10px;
 }
 
 .commentDetails {
   padding: 10px;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .commentUserName {
   color: #289381;
-  height: 5vh;
+  height: 3.33vh;
   cursor: pointer;
 }
 .commentDescription {
-  height: fit-content;
+  height: 3.33vh;
+  margin-left: 20px;
   width: 100%;
-  margin-bottom: 20px;
 }
 .commentStars {
-  height: 5vh;
-  margin-bottom: 10px;
+  height: 3.33vh;
+  margin-left: 20px;
+}
+.startButton {
+  color: rgb(155, 155, 155);
+  cursor: pointer;
+}
+.startButtonActive {
+  color: rgb(246, 250, 22);
+  cursor: pointer;
 }
 @media (max-width: 800px) and (max-width: 1200px) {
   .productContainer {
@@ -177,5 +193,17 @@
 
     padding-left: 10%;
     padding-right: 10%;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 1200px) {
+  .commentContainer {
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    border-radius: 10px;
   }
 }

@@ -7,7 +7,7 @@
   border-bottom: 1px solid #cccccc;
   top: 0;
   left: 0;
-  height: 25vh;
+  height: 18vh;
   background-color: #ffffff;
 }
 
@@ -19,7 +19,7 @@
   padding: 1.2rem;
   background: #ffffff;
   padding-left: 5%;
-  height: 20vh;
+  height: 10vh;
 }
 a,
 a:hover,
@@ -29,7 +29,9 @@ a:active {
   color: inherit;
 }
 .logoLinkContainer {
-  width: 300px;
+  width: 200px;
+  margin-top: 10px;
+  height: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +53,7 @@ a:active {
   color: #2a9986;
   font-family: "Brush Script MT", cursive;
   margin-bottom: 7px;
+  height: 50%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,7 +62,7 @@ a:active {
 
 .navBarUnderLogoText {
   color: rgb(74, 74, 74);
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 300;
   letter-spacing: 2px;
   width: 100%;
@@ -191,7 +194,7 @@ a:active {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  height: 5vh;
+  height: 7vh;
 }
 
 .categoriess {
@@ -264,65 +267,5 @@ a:active {
   }
   to {
     opacity: 0;
-  }
-}
-
-@media (max-width: 870px) {
-  .logoLinkContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .logoContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-  }
-  .navBarUnderLogoText {
-    color: rgb(74, 74, 74);
-    font-size: 10px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .navbar__logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #2a9986;
-    font-family: "Brush Script MT", cursive;
-    margin-bottom: 7px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .navBarIconsContainer {
-    height: 100%;
-    display: flex;
-    width: 100px;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-    display: relative;
-  }
-}
-@media (max-width: 550px) {
-  .optionsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 5vh;
   }
 }

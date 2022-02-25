@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { ProductComponent } from "./components/ProductComponent";
 import { setProducts } from "../../redux/actions/productActions/productActions";
+import { SearchBar } from "../../components/navBar/SearchBar";
 import "./productPage.css";
 
 interface Props {
@@ -36,8 +37,27 @@ export const ProductListing: React.FC<Props> = ({
   return (
     <div>
       <div className="products-container">
-        <div className="top-products">
-          <span>our products </span>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+          }}
+        >
+          <h1
+            style={{
+              height: "7vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            our products{" "}
+          </h1>
+          <SearchBar searchItem={searchItem} setSearchItem={setSearchItem} />
+          <div></div>
         </div>
         <div className={!searchItem ? "products" : "productSearch"}>
           <ProductComponent

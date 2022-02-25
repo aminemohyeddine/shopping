@@ -75,6 +75,11 @@ export const cartReducer = (
           (item: ProductInterface) => item._id !== action.payload.id
         ),
       };
+    case ActionTypes.REMOVE_ALL_PRODUCTS_FROM_CART:
+      return {
+        ...state,
+        cart: [],
+      };
     case ActionTypes.ADJUST_QTY:
       return {
         ...state,

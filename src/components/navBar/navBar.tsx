@@ -16,7 +16,6 @@ import { ProductInterface } from "../../interfaces/productsInterfaces";
 
 import { IRender } from "../../App";
 import { useAppSelector } from "../../redux/hooks";
-import { SearchBar } from "./SearchBar";
 import Cookies from "universal-cookie";
 import "./navBar.css";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
@@ -30,8 +29,6 @@ interface Props {
     userUnderSection: boolean;
   };
   setItemsShow: Dispatch<SetStateAction<IRender>>;
-  searchItem: boolean;
-  setSearchItem: Dispatch<SetStateAction<boolean>>;
   tokenExpired: boolean;
   setTokenExpired: Dispatch<SetStateAction<boolean>>;
   user: UserInterface;
@@ -46,8 +43,6 @@ export const Navbar: React.FC<Props> = ({
   setShowSideBar,
   itemsShow,
   setItemsShow,
-  searchItem,
-  setSearchItem,
   tokenExpired,
   isUserAuth,
   setIsUserAuth,
@@ -87,7 +82,6 @@ export const Navbar: React.FC<Props> = ({
         </Link>
 
         <div className="navBarIconsContainer">
-          <SearchBar searchItem={searchItem} setSearchItem={setSearchItem} />
           <div
             className="userIconContainer"
             onMouseLeave={() => {

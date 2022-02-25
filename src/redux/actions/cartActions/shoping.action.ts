@@ -5,6 +5,7 @@ import {
   addToCartActionI,
   AdjustQtyActionI,
   removeCartActionI,
+  removeAllProductsFromCartInterface,
 } from "../../interfaces/CarteTypes";
 
 export const addToCart = (id: string, data: ProductI[], itemNumber: number) => {
@@ -64,4 +65,12 @@ export const loadCurrentItem = (item: number) => {
     type: actionConstants.LOAD_CURRENT_ITEM,
     payload: item,
   };
+};
+
+export const removeAllProductsFromCart = () => {
+  return (dispatch: Dispatch<removeAllProductsFromCartInterface>) =>
+    dispatch({
+      type: actionConstants.REMOVE_ALL_PRODUCTS_FROM_CART,
+    });
+  // localStorage.setItem("cart", JSON.stringify(getState().cart.cart));
 };

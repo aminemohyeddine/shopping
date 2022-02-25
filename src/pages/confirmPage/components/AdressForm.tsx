@@ -55,7 +55,7 @@ export const AddressForm: React.FC<Props> = ({
       .required("zip is required"),
     country: yup
       .string()
-      .min(3, "country should be of minimum 3 characters length")
+      .min(2, "country should be of minimum 3 characters length")
       .required("country is required"),
     email: yup
       .string()
@@ -145,6 +145,25 @@ export const AddressForm: React.FC<Props> = ({
           <Grid item xs={12}>
             <TextField
               required
+              id="phoneNumber"
+              name="phoneNumber"
+              label="phone number"
+              fullWidth
+              autoComplete="given-name"
+              variant="standard"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)
+              }
+              helperText={
+                formik.touched.phoneNumber && formik.errors.phoneNumber
+              }
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              required
               id="address1"
               name="address1"
               label="Address line 1"
@@ -172,25 +191,7 @@ export const AddressForm: React.FC<Props> = ({
               helperText={formik.touched.address2 && formik.errors.address2}
             />
           </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              id="phoneNumber"
-              name="phoneNumber"
-              label="phone number"
-              fullWidth
-              autoComplete="given-name"
-              variant="standard"
-              value={formik.values.phoneNumber}
-              onChange={formik.handleChange}
-              error={
-                formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)
-              }
-              helperText={
-                formik.touched.phoneNumber && formik.errors.phoneNumber
-              }
-            />
-          </Grid>
+
           <Grid item xs={12} sm={6}>
             <TextField
               required

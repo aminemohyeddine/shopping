@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { ProductInterface } from "../../../interfaces/productsInterfaces";
 import { useAppSelector } from "../../../redux/hooks";
+
 import axios from "axios";
 
 import List from "@mui/material/List";
@@ -40,6 +41,7 @@ export const Review: React.FC<Props> = ({
       items += item.qty;
       price += item.qty * item.price;
     });
+
     setTotalItems(items);
     setTotalPrice(price);
     console.log("====================================");
@@ -58,7 +60,7 @@ export const Review: React.FC<Props> = ({
       .REACT_APP_SEND_CONFIRMED_DATA as string;
 
     try {
-      const resp = await axios.post(sendConfirmedItemsLink, {
+      await axios.post(sendConfirmedItemsLink, {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -98,8 +100,7 @@ export const Review: React.FC<Props> = ({
           </Typography>
           <Typography gutterBottom>{informations.firstName}</Typography>
           <Typography gutterBottom>
-            {informations.address1}, {informations.address2},{" "}
-            {informations.city}, {informations.country} ,{informations.state},
+            {informations.address1}, {informations.city}, {informations.country}
             {informations.zip}
           </Typography>
           <Typography gutterBottom>{informations.phoneNumber}</Typography>
