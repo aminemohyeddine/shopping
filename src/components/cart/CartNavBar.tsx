@@ -87,7 +87,13 @@ export const CartNavBar: React.FC<Props> = ({ itemsShow, setItemsShow }) => {
                   ) : (
                     <div className="CartItemsContainer">
                       {cart.map((item: any, key: number) => {
-                        return <CartItem key={key} item={item} />;
+                        return (
+                          <CartItem
+                            setItemsShow={setItemsShow}
+                            key={key}
+                            item={item}
+                          />
+                        );
                       })}
                       <div className="totalPriceContainer">
                         <div className="totalPriceLine"></div>
@@ -166,7 +172,13 @@ export const CartNavBar: React.FC<Props> = ({ itemsShow, setItemsShow }) => {
                   ) : (
                     <div className="CartItemsContainer">
                       {cart.map((item: any, key: number) => {
-                        return <CartItem key={key} item={item} />;
+                        return (
+                          <CartItem
+                            setItemsShow={setItemsShow}
+                            key={key}
+                            item={item}
+                          />
+                        );
                       })}
                       <div className="totalPriceContainer">
                         <div className="totalPriceLine"></div>

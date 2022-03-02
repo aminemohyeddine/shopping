@@ -1,6 +1,6 @@
 .cartItemContainer {
   width: 90%;
-  height: 22vh;
+  height: 25vh;
   border: 1px solid #adadad;
   margin-right: 5%;
   margin-left: 5%;
@@ -19,6 +19,7 @@
   padding-left: 10%;
   padding-right: 10%;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .cartItemImageContainer {
@@ -94,7 +95,7 @@
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 .cartItemPrice {
-  height: 5vh;
+  height: 8vh;
   display: flex;
   flex-direction: column;
 }
@@ -109,6 +110,9 @@
 
 .cartItemPrice > span {
   color: #2a9986;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
   font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,

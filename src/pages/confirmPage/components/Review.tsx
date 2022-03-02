@@ -86,7 +86,7 @@ export const Review: React.FC<Props> = ({
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $ {totalPrice}
+            $ {totalPrice.toFixed(2)}
           </Typography>
         </ListItem>
       </List>
