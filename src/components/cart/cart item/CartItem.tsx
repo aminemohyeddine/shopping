@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./CartItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../../redux/hooks";
+
 import { Link } from "react-router-dom";
+import { ProductInterface } from "../../../interfaces/productsInterfaces";
+import {
+  addToCart,
+  minusToCart,
+} from "../../../redux/actions/cartActions/shoping.action";
 
 import { removeFromCart } from "../../../redux/actions/cartActions/shoping.action";
 import { faCircle, faTrashCan } from "@fortawesome/free-solid-svg-icons";
@@ -20,9 +27,19 @@ interface Props {
     __v: number;
     _id: string;
   };
+  setItemsShow: any;
 }
 
-export const CartItem: React.FC<Props> = ({ item }) => {
+export const CartItem: React.FC<Props> = ({ item, setItemsShow }) => {
+  const dispatch = useDispatch();
+  const allProduct: {
+    test: [];
+    products: ProductInterface[];
+    product: ProductInterface;
+    productSearched: ProductInterface[];
+  } = useAppSelector((state) => state.allProducts);
+  const products: ProductInterface[] = allProduct.products;
+
   const [totalPrice, setTotalPrice] = useState(item.price);
   const total = () => {
     const total = item.price * item.qty;
@@ -31,14 +48,19 @@ export const CartItem: React.FC<Props> = ({ item }) => {
   useEffect(() => {
     total();
   }, [item.qty]); // eslint-disable-line react-hooks/exhaustive-deps
-  const dispatch = useDispatch();
 
   return (
     <div className="cartItemContainer">
       <div className="topCartItemContainer">
         <div className="cartItemImageContainer">
-          <Link className="titleSection" to={`/product/${item.id}`}>
+          <Link className="titleSection" to={`/product/${item._id}`}>
             <img
+              onClick={() => {
+                setItemsShow((prevState: any) => ({
+                  ...prevState,
+                  cartNavBar: "inActive",
+                }));
+              }}
               className="cartItemImage"
               alt="productImage"
               src={item.imageUrl}
@@ -48,7 +70,16 @@ export const CartItem: React.FC<Props> = ({ item }) => {
         <div className="cartItemInfos">
           <div className="cartItemTitleDeleteSection">
             <div className="titleSection">
-              <Link className="titleLink" to={`/product/${item.id}`}>
+              <Link
+                onClick={() => {
+                  setItemsShow((prevState: any) => ({
+                    ...prevState,
+                    cartNavBar: "inActive",
+                  }));
+                }}
+                className="titleLink"
+                to={`/product/${item._id}`}
+              >
                 {item.title}
               </Link>
             </div>
@@ -120,7 +151,55 @@ export const CartItem: React.FC<Props> = ({ item }) => {
         </div>
         <div className="cartItemPrice">
           <span>qty:</span>
-          <p> {item.qty}</p>
+          <div style={{ display: "flex" }} className="modifyQty">
+            <div
+              onClick={() => {
+                if (item.qty > 1) {
+                  dispatch(minusToCart(item._id, products, 1));
+                } else {
+                  dispatch(removeFromCart(item._id));
+                }
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+                padding: "3px",
+                backgroundColor: "#2a9986",
+                marginRight: "7px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "70%",
+                color: "white",
+              }}
+              className="p"
+            >
+              -
+            </div>
+            <p> {item.qty}</p>
+            <div
+              onClick={() => {
+                dispatch(addToCart(item._id, products, 1));
+              }}
+              style={{
+                height: "20px",
+                width: "20px",
+                padding: "3px",
+                backgroundColor: "#2a9986",
+                marginLeft: "7px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "70%",
+                color: "white",
+              }}
+              className="p"
+            >
+              +
+            </div>
+          </div>
         </div>
         <div className="cartItemPrice">
           <span>total:</span>

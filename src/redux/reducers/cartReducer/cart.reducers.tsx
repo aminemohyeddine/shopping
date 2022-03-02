@@ -42,6 +42,16 @@ export const cartReducer = (
           : [...state.cart, { ...item, qty: itemNumber }],
       };
 
+    case "minusToCart":
+      return {
+        ...state,
+        cart: state.cart.map((cartItem: ProductInterface, key) =>
+          cartItem._id === action.payload.id && cartItem.qty > 0
+            ? { ...cartItem, qty: cartItem.qty - 1 }
+            : { ...cartItem }
+        ),
+      };
+
     case ActionTypes.ADD_TO_CART_FROM_PRODUCT_PAGE:
       const data = action.payload.data;
       //get item from data

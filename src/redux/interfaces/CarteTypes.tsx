@@ -7,7 +7,8 @@ export interface CartActionI {
     | actionConstants.LOAD_CURRENT_ITEM
     | actionConstants.ADJUST_QTY
     | actionConstants.ADD_TO_CART
-    | actionConstants.CLEAR_LOCAL_STORAGE;
+    | actionConstants.CLEAR_LOCAL_STORAGE
+    | "minusToCart";
   payload: {
     id: string;
     data: Array<ProductI>;
@@ -38,12 +39,14 @@ export interface getAllProductActionI {
     | actionConstants.REMOVE_FROM_CART
     | actionConstants.ADJUST_QTY
     | actionConstants.LOAD_CURRENT_ITEM
-    | actionConstants.REMOVE_ALL_PRODUCTS_FROM_CART;
+    | actionConstants.REMOVE_ALL_PRODUCTS_FROM_CART
+    | "minusToCart";
   payload: PayloadCartI;
 }
 
 export interface addToCartActionI {
   type:
+    | "minusToCart"
     | actionConstants.ADD_TO_CART
     | actionConstants.ADD_TO_CART_FROM_PRODUCT_PAGE;
 

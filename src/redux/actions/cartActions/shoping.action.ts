@@ -20,6 +20,22 @@ export const addToCart = (id: string, data: ProductI[], itemNumber: number) => {
     });
 };
 
+export const minusToCart = (
+  id: string,
+  data: ProductI[],
+  itemNumber: number
+) => {
+  return (dispatch: Dispatch<addToCartActionI>) =>
+    dispatch({
+      type: "minusToCart",
+      payload: {
+        id: id,
+        data: data,
+        itemNumber: itemNumber,
+      },
+    });
+};
+
 export const addToCartFromProductPage = (
   id: string,
   data: ProductI[],
