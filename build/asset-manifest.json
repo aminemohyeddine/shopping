@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87c6964e.chunk.css",
+    "main.js": "/static/js/main.2c0319aa.chunk.js",
+    "main.js.map": "/static/js/main.2c0319aa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6ba6d619.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6ba6d619.js.map",
+    "static/css/2.cf0b44da.chunk.css": "/static/css/2.cf0b44da.chunk.css",
+    "static/js/2.f7b6247a.chunk.js": "/static/js/2.f7b6247a.chunk.js",
+    "static/js/2.f7b6247a.chunk.js.map": "/static/js/2.f7b6247a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.cf0b44da.chunk.css.map": "/static/css/2.cf0b44da.chunk.css.map",
+    "static/css/main.87c6964e.chunk.css.map": "/static/css/main.87c6964e.chunk.css.map",
+    "static/js/2.f7b6247a.chunk.js.LICENSE.txt": "/static/js/2.f7b6247a.chunk.js.LICENSE.txt",
+    "static/media/Online Shopping - Copy.0482ecd4.png": "/static/media/Online Shopping - Copy.0482ecd4.png",
+    "static/media/allCategories.af758ab0.jpg": "/static/media/allCategories.af758ab0.jpg",
+    "static/media/blog-header-shipping-boxes-keyboard.31da5f42.jpg": "/static/media/blog-header-shipping-boxes-keyboard.31da5f42.jpg",
+    "static/media/home.2985ef93.jpg": "/static/media/home.2985ef93.jpg",
+    "static/media/multimedia.2fd2eff1.jpg": "/static/media/multimedia.2fd2eff1.jpg",
+    "static/media/phone.1710f3cb.jpg": "/static/media/phone.1710f3cb.jpg",
+    "static/media/styles.css": "/static/media/revicons.e8746a62.woff",
+    "static/media/shop me (2).b4df035e.jpg": "/static/media/shop me (2).b4df035e.jpg",
+    "static/media/tv.a1446263.jpg": "/static/media/tv.a1446263.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ba6d619.js",
+    "static/css/2.cf0b44da.chunk.css",
+    "static/js/2.f7b6247a.chunk.js",
+    "static/css/main.87c6964e.chunk.css",
+    "static/js/main.2c0319aa.chunk.js"
+  ]
+}
