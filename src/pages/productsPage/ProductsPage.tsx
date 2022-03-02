@@ -3,6 +3,8 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { ProductComponent } from "./components/ProductComponent";
 import { setProducts } from "../../redux/actions/productActions/productActions";
+import { SearchBar } from "../../components/navBar/SearchBar";
+
 import "./productPage.css";
 
 interface Props {
@@ -34,10 +36,20 @@ export const ProductListing: React.FC<Props> = ({
     fetchProducts();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
-    <div>
-      <div className="products-container">
-        <div className="top-products">
-          <span>our products </span>
+    <>
+      <div style={{ height: "fit-content" }} className="products-container">
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+          }}
+        >
+          <h2 className="productListedTitle">products listed By category </h2>
+          <SearchBar searchItem={searchItem} setSearchItem={setSearchItem} />
+          <div></div>
         </div>
         <div className={!searchItem ? "products" : "productSearch"}>
           <ProductComponent
@@ -47,6 +59,6 @@ export const ProductListing: React.FC<Props> = ({
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };

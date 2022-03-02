@@ -14,17 +14,13 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import * as yup from "yup";
-import "./LoginPage.scss";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { useFormik } from "formik";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextField from "@mui/material/TextField";
 //interfaces
 import { UserInterface } from "../../interfaces/userIntarfaces";
-
-import { faStore } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   tokenExpired: boolean;
@@ -141,7 +137,7 @@ export const LoginPage: React.FC<Props> = ({
             sm={4}
             md={7}
             sx={{
-              backgroundImage: "url(https://source.unsplash.com/random)",
+              backgroundImage: "url(https://i.ibb.co/sPr2S23/store-you.jpg)",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"

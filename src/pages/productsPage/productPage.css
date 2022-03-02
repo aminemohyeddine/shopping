@@ -1,8 +1,25 @@
 .products {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 40px;
+  background-color: #deedea;
+}
+.productListedTitle {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3e9489;
+}
+
+.productListedTitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .productSearch {

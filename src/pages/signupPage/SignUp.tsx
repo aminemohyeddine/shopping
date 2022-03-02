@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Formik, Form } from "formik";
 import * as yup from "yup";
 import axios from "axios";
 import { useFormik } from "formik";
 import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStore } from "@fortawesome/free-solid-svg-icons";
 
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -20,8 +17,6 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-import "./SignUp.scss";
 
 export const SignUp = () => {
   const [message, setMessage] = useState("");
@@ -125,18 +120,6 @@ export const SignUp = () => {
   });
 
   const theme = createTheme();
-
-  function SignUp() {
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      // eslint-disable-next-line no-console
-      console.log({
-        email: data.get("email"),
-        password: data.get("password"),
-      });
-    };
-  }
 
   return (
     <>
@@ -256,6 +239,7 @@ export const SignUp = () => {
                   <TextField
                     required
                     fullWidth
+                    autoComplete="current-password"
                     name="password"
                     label="Password"
                     type="password"

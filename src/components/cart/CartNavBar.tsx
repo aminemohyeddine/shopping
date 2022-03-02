@@ -41,73 +41,82 @@ export const CartNavBar: React.FC<Props> = ({ itemsShow, setItemsShow }) => {
       {(() => {
         if (itemsShow.cartNavBar === "inActive") {
           return (
-            <div className="CartNavBarContainerOff">
-              <div className="cartNavBarHeader">
-                <p>shopping cart</p>
-                <FontAwesomeIcon
-                  onClick={() => {
-                    setItemsShow((prevState) => ({
-                      ...prevState,
-                      cartNavBar: "inActive",
-                    }));
-                  }}
-                  className="closeCartBarIcon"
-                  icon={faXmark}
-                />
-              </div>
-              <div className="cartItemsContainer">
-                {cart.length === 0 ? (
-                  <div className="emptyCartContainer">
-                    <div className="emptyCartIconContainer">
-                      <FontAwesomeIcon
-                        className="emptyCartIcon"
-                        icon={faCartPlus}
-                      />
+            <>
+              <div className="CartNavBarContainerOff">
+                <div className="cartNavBarHeader">
+                  <p>shopping cart</p>
+                  <FontAwesomeIcon
+                    onClick={() => {
+                      setItemsShow((prevState) => ({
+                        ...prevState,
+                        cartNavBar: "inActive",
+                      }));
+                    }}
+                    className="closeCartBarIcon"
+                    icon={faXmark}
+                  />
+                </div>
+                <div className="cartItemsContainer">
+                  {cart.length === 0 ? (
+                    <div className="emptyCartContainer">
+                      <div className="emptyCartIconContainer">
+                        <FontAwesomeIcon
+                          className="emptyCartIcon"
+                          icon={faCartPlus}
+                        />
+                      </div>
+                      <div className="emptyCartText">
+                        <p>
+                          You do not have any products in your shopping cart
+                        </p>
+                      </div>
+                      <div className="emptyCartContinueButton">
+                        <button
+                          onClick={() => {
+                            setItemsShow((prevState) => ({
+                              ...prevState,
+                              cartNavBar: "inActive",
+                            }));
+                          }}
+                          className="continueButton"
+                        >
+                          CONTINUE SHOPPING
+                        </button>
+                      </div>
                     </div>
-                    <div className="emptyCartText">
-                      <p>You do not have any products in your shopping cart</p>
+                  ) : (
+                    <div className="CartItemsContainer">
+                      {cart.map((item: any, key: number) => {
+                        return <CartItem key={key} item={item} />;
+                      })}
+                      <div className="totalPriceContainer">
+                        <div className="totalPriceLine"></div>
+                        <div className="totalPriceItems">
+                          <div className="totalPriceText">total</div>
+                          <div className="totalPrice">
+                            {totalPrice.toFixed(2)} $
+                          </div>
+                        </div>
+                      </div>
+                      <div className="confirmSection">
+                        <Link
+                          onClick={() => {
+                            setItemsShow((prevState) => ({
+                              ...prevState,
+                              cartNavBar: "inActive",
+                            }));
+                          }}
+                          to="/confirm"
+                          className="purchase"
+                        >
+                          Confirm
+                        </Link>
+                      </div>
                     </div>
-                    <div className="emptyCartContinueButton">
-                      <button
-                        onClick={() => {
-                          setItemsShow((prevState) => ({
-                            ...prevState,
-                            cartNavBar: "inActive",
-                          }));
-                        }}
-                        className="continueButton"
-                      >
-                        CONTINUE SHOPPING
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="CartItemsContainer">
-                    {cart.map((item: any, key: number) => {
-                      return (
-                        <>
-                          <CartItem key={key} item={item} />
-                        </>
-                      );
-                    })}
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-              <div className="confirmSection">
-                <Link
-                  onClick={() => {
-                    setItemsShow((prevState) => ({
-                      ...prevState,
-                      cartNavBar: "inActive",
-                    }));
-                  }}
-                  to="/confirm"
-                  className="purchase"
-                >
-                  Confirm
-                </Link>
-              </div>
-            </div>
+            </>
           );
         } else if (itemsShow.cartNavBar === "active") {
           return (
@@ -157,11 +166,7 @@ export const CartNavBar: React.FC<Props> = ({ itemsShow, setItemsShow }) => {
                   ) : (
                     <div className="CartItemsContainer">
                       {cart.map((item: any, key: number) => {
-                        return (
-                          <>
-                            <CartItem key={key} item={item} />
-                          </>
-                        );
+                        return <CartItem key={key} item={item} />;
                       })}
                       <div className="totalPriceContainer">
                         <div className="totalPriceLine"></div>

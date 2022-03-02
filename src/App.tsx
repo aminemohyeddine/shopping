@@ -2,14 +2,10 @@ import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import Cookies from "universal-cookie";
+import { Footer } from "./components/footer/Footer";
 // import { Navbar } from "./components/navBar/navBar";
 import axios from "axios";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //interfaces
 import { UserInterface } from "./interfaces/userIntarfaces";
 
@@ -24,6 +20,8 @@ import {
   ProductsPage,
   ProductDetails,
   ConfirmPagee,
+  HomePage,
+  CategoryPage,
 } from "./pages";
 
 export interface IRender {
@@ -135,8 +133,6 @@ function App() {
         setShowSideBar={setShowSideBar}
         itemsShow={itemsShow}
         setItemsShow={setItemsShow}
-        searchItem={searchItem}
-        setSearchItem={setSearchItem}
         user={user}
         setUser={setUser}
         isUserAuth={isUserAuth}
@@ -150,7 +146,7 @@ function App() {
           exact
           render={(props) => (
             <div>
-              <Redirect to="/products" />
+              <HomePage />
             </div>
           )}
         />
@@ -162,13 +158,11 @@ function App() {
           // AlreadyLogin,
           // SignUpAuth,
           render={(props) => (
-            <div>
-              <ProductsPage
-                {...props}
-                searchItem={searchItem}
-                setSearchItem={setSearchItem}
-              />
-            </div>
+            <ProductsPage
+              {...props}
+              searchItem={searchItem}
+              setSearchItem={setSearchItem}
+            />
           )}
         />
 
@@ -186,9 +180,7 @@ function App() {
           path="/product/:productId"
           exact
           render={(props) => (
-            <div>
-              <ProductDetails user={user} isUserAuth={isUserAuth} />
-            </div>
+            <ProductDetails user={user} isUserAuth={isUserAuth} />
           )}
         />
         <Route
@@ -212,8 +204,22 @@ function App() {
         />
         <Route path="/signup" exact component={SignUpAuth} />
 
+        <Route
+          path="/category/:categoryName"
+          exact
+          render={(props) => (
+            <div>
+              <CategoryPage
+                searchItem={searchItem}
+                setSearchItem={setSearchItem}
+              />
+            </div>
+          )}
+        />
+
         <Route>ERROR 4044</Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

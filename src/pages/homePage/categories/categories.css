@@ -1,0 +1,23 @@
+.categorySectionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.categorySection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 250px;
+  height: 20vh;
+  padding: 10px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.categorySectionName {
+  font-size: 40px;
+}

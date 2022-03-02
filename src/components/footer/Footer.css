@@ -1,0 +1,32 @@
+.footerContainer {
+  padding-top: 50px;
+  height: fit-content;
+  background-color: #289381;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 100px 10px 100px;
+  color: white;
+  flex-wrap: wrap;
+
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+}
+
+.footerItemContainer {
+  min-width: 250px;
+}
+.footerLink {
+  font-size: 0.9rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(0, 0, 0);
+
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.footerLink:hover {
+  text-decoration: underline;
+}
+.FooterTitle {
+  color: rgb(255, 104, 104);
+}

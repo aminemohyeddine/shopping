@@ -37,7 +37,8 @@ export interface getAllProductActionI {
     | actionConstants.ADD_TO_CART_FROM_PRODUCT_PAGE
     | actionConstants.REMOVE_FROM_CART
     | actionConstants.ADJUST_QTY
-    | actionConstants.LOAD_CURRENT_ITEM;
+    | actionConstants.LOAD_CURRENT_ITEM
+    | actionConstants.REMOVE_ALL_PRODUCTS_FROM_CART;
   payload: PayloadCartI;
 }
 
@@ -67,4 +68,8 @@ export interface removeCartActionI {
   payload: {
     id: string;
   };
+}
+
+export interface removeAllProductsFromCartInterface {
+  type: actionConstants.REMOVE_ALL_PRODUCTS_FROM_CART;
 }

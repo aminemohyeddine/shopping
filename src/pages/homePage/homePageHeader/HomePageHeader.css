@@ -1,0 +1,116 @@
+.homePageCarousel {
+  height: 50vh;
+  width: 60%;
+}
+
+.carouselImage {
+  height: 50vh;
+  width: 100%;
+}
+
+.homePageHeaderContainer {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.assistanceList {
+  background-color: #3e9489;
+  width: 200px;
+  height: 50vh;
+  margin-left: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoriesListHPH {
+  background-color: #3e9489;
+  width: 200px;
+  height: 50vh;
+  margin-right: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.categoryHPH {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.categoryHPH {
+  display: flex;
+  width: fit-content;
+}
+.categoryHPHIcon {
+  margin-right: 7px;
+}
+.categoryHPH:hover > .categoryHPHIcon {
+  cursor: pointer;
+  color: #feb800;
+}
+.categoryHPH:hover > .categoryHPHName {
+  cursor: pointer;
+  color: #feb800;
+}
+
+.supportCenter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.supportCenterText > div {
+  color: white;
+  font-size: 1rem;
+  width: 140px;
+  margin: 0px;
+  margin-left: 10px;
+}
+.supportCenterIcon {
+  margin-right: 5px;
+  color: rgb(255, 103, 103);
+}
+.rightBarTitle {
+  color: black;
+  font-size: 1.2rem;
+  margin: 0px;
+}
+.rightBarTitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  .categoriesListHPH {
+    display: none;
+  }
+  .assistanceList {
+    display: none;
+  }
+  .homePageCarousel {
+    height: 50vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .homePageHeaderContainer {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .homePageCarousel {
+    height: fit-content;
+    width: 100%;
+  }
+}

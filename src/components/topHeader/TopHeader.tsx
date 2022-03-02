@@ -57,7 +57,7 @@ export const TopHeader: React.FC<Props> = ({ normalMenu }) => {
               <p>Free</p>
             </div>
             <div className="topHeaderTitle">
-              <p>service hotline: 0800 - 0445500</p>
+              <p>service hotline: 2126 -61 121314</p>
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export const TopHeader: React.FC<Props> = ({ normalMenu }) => {
                     <p>Free</p>
                   </div>
                   <div className="topHeaderTitle">
-                    <p>service hotline: 0800 - 0445500</p>
+                    <p>service hotline: 212661 - 121314</p>
                   </div>
                 </div>
               </div>
