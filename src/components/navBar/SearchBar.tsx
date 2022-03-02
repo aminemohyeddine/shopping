@@ -63,7 +63,7 @@ export const SearchBar: React.FC<Props> = ({ searchItem, setSearchItem }) => {
           style={{ color: "red" }}
           id="searchInput"
           name="searchInput"
-          label="search a product"
+          label="search for a product"
           fullWidth
           onChange={(e) => {
             changeHandler(e);

@@ -1,10 +1,11 @@
 import { actionConstants } from "../constants/actionConstants";
 
 export interface ProductI {
+  details: string;
+  imageUrl: string[];
   _id: string;
   id: number;
   title: string;
-  imageUrl: string;
   description: string;
   price: number;
   category: string;

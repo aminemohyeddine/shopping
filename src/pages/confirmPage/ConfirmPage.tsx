@@ -22,8 +22,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        ShopMe
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -37,7 +37,6 @@ const theme = createTheme();
 
 export interface informationsInterface {
   address1: string;
-  address2: string;
   city: string;
   country: string;
   email: string;
@@ -59,7 +58,6 @@ export const ConfirmPage = () => {
 
   const [informations, setInformations] = useState<informationsInterface>({
     address1: "",
-    address2: "",
     city: "",
     country: "",
     email: "",
@@ -74,12 +72,7 @@ export const ConfirmPage = () => {
 
   useEffect(() => {
     if (activeStep === 2) {
-      console.log(activeStep);
-
       setTimeout(() => {
-        console.log("====================================");
-        console.log("5000");
-        console.log("====================================");
         dispatch(removeAllProductsFromCart());
         history.push("/");
       }, 5000);

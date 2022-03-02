@@ -44,9 +44,6 @@ export const Review: React.FC<Props> = ({
 
     setTotalItems(items);
     setTotalPrice(price);
-    console.log("====================================");
-    console.log(cart);
-    console.log("====================================");
   }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sendConfirmedData = async (
@@ -114,8 +111,6 @@ export const Review: React.FC<Props> = ({
               const address: string =
                 informations.address1 +
                 " ," +
-                informations.address2 +
-                " ," +
                 informations.city +
                 " ," +
                 informations.country +
@@ -123,7 +118,6 @@ export const Review: React.FC<Props> = ({
                 informations.state +
                 " ," +
                 informations.zip;
-              console.log(address);
 
               sendConfirmedData(
                 informations.firstName,

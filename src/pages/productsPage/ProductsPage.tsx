@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { ProductComponent } from "./components/ProductComponent";
 import { setProducts } from "../../redux/actions/productActions/productActions";
 import { SearchBar } from "../../components/navBar/SearchBar";
+
 import "./productPage.css";
 
 interface Props {
@@ -35,8 +36,8 @@ export const ProductListing: React.FC<Props> = ({
     fetchProducts();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
-    <div>
-      <div className="products-container">
+    <>
+      <div style={{ height: "fit-content" }} className="products-container">
         <div
           style={{
             display: "flex",
@@ -46,16 +47,7 @@ export const ProductListing: React.FC<Props> = ({
             paddingRight: "20px",
           }}
         >
-          <h1
-            style={{
-              height: "7vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            our products{" "}
-          </h1>
+          <h2 className="productListedTitle">products listed By category </h2>
           <SearchBar searchItem={searchItem} setSearchItem={setSearchItem} />
           <div></div>
         </div>
@@ -67,6 +59,6 @@ export const ProductListing: React.FC<Props> = ({
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };

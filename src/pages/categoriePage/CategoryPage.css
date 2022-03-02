@@ -1,0 +1,41 @@
+.categoryPageContainer {
+  width: 100%;
+}
+.categoryPageTitleSearchSectionContainer {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: fit-content;
+  display: flex;
+  width: 100%;
+}
+
+.categoryPageTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 49.125px;
+  width: fit-content;
+  margin-right: 40px;
+}
+
+.itemContainer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: #3d9589;
+}
+
+.emptySearchPageContainer {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.emptySearchText {
+  margin-top: 100px;
+  color: white;
+  cursor: pointer;
+}

@@ -70,6 +70,11 @@ a:active {
   align-items: center;
   justify-content: center;
 }
+.shopmeLogo {
+  margin-top: 10px;
+  height: 80px;
+  width: 150px;
+}
 
 .navBarIconsContainer {
   height: 100%;
@@ -267,5 +272,17 @@ a:active {
   }
   to {
     opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .optionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 7vh;
   }
 }

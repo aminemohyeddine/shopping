@@ -8,6 +8,7 @@ import {
   faAngleUp,
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
+import ShopMeLogo from "../../assets/shop me (2).jpg";
 
 //interfaces
 //interfaces
@@ -76,8 +77,7 @@ export const Navbar: React.FC<Props> = ({
       <div className="navbar">
         <Link className="logoLinkContainer" to="/">
           <div className="logoContainer">
-            <div className="navbar__logo">ShopMe</div>
-            <div className="navBarUnderLogoText">shopping store you admire</div>
+            <img className="shopmeLogo" alt="shopmeLogo" src={ShopMeLogo} />
           </div>
         </Link>
 

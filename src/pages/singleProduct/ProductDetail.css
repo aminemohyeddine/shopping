@@ -3,12 +3,12 @@
   padding: 30px 30px 30px 30px;
 }
 .infoContainer {
-  width: 35%;
+  width: 60%;
 }
 
 .productImageContainer {
-  width: 50%;
-  height: 60vh;
+  width: 30%;
+  height: fit-content;
   padding: 30px 30px 30px 30px;
 }
 
@@ -25,6 +25,12 @@
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
+.itemTitle:hover {
+  color: #289381;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .category {
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -35,13 +41,18 @@
   font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-
   margin-bottom: 30px;
+}
+.category:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .itemPrice {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: rgb(255, 85, 85);
+  cursor: pointer;
 }
 .gif-container {
   height: 65vh;
@@ -55,7 +66,7 @@
   width: 100%;
   height: fit-content;
   line-height: 1em;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -64,6 +75,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  align-items: center;
 }
 .quantityText {
   font-size: 2rem;
@@ -73,7 +85,7 @@
 }
 
 .addButton {
-  width: 100%;
+  width: 40%;
   cursor: pointer;
   padding: 10px 0px 10px 0px;
   background-color: white;
@@ -147,6 +159,13 @@
   width: 90px;
 }
 
+.details {
+  width: 100%;
+  font-family: Helvetica Now Display, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
 .commentDetails {
   padding: 10px;
   height: 13vh;
@@ -176,6 +195,14 @@
   color: rgb(246, 250, 22);
   cursor: pointer;
 }
+.loginToAddComment {
+  margin-left: 20px;
+  color: #289381;
+}
+.loginToAddComment:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 @media (max-width: 800px) and (max-width: 1200px) {
   .productContainer {
     display: flex;
@@ -185,8 +212,19 @@
   }
   .productImageContainer {
     width: 100%;
-    height: 60vh;
+    height: fit-content;
     padding: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .otherImagesContainer {
+    display: flex;
+  }
+  .productImage {
+    height: 40vh;
+    width: 50%;
   }
   .infoContainer {
     width: 90%;
@@ -198,12 +236,19 @@
 
 @media (max-width: 900px) and (max-width: 1200px) {
   .commentContainer {
-    width: 100%;
+    width: 90%;
     display: flex;
     border: 2px solid black;
     margin-bottom: 10px;
     margin-top: 20px;
 
     border-radius: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productImage {
+    height: 50vh;
+    width: 100%;
   }
 }

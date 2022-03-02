@@ -1,0 +1,50 @@
+.categoriesBarContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 30px;
+}
+
+.categoriesBarItem {
+  width: 150px;
+  display: flex;
+  height: 7vh;
+  background-color: #3e9489;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.categoriesBarIcon {
+  margin-right: 10px;
+  color: #fe9900;
+}
+.categoriesBarText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .categoriesBarContainer {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

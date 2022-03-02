@@ -137,7 +137,7 @@ export const LoginPage: React.FC<Props> = ({
             sm={4}
             md={7}
             sx={{
-              backgroundImage: "url(https://source.unsplash.com/random)",
+              backgroundImage: "url(https://i.ibb.co/sPr2S23/store-you.jpg)",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"

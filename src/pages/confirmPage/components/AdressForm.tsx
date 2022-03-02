@@ -37,10 +37,7 @@ export const AddressForm: React.FC<Props> = ({
       .string()
       .min(10, "address 1 should be of minimum 10 characters length")
       .required("address 1 is required"),
-    address2: yup
-      .string()
-      .min(10, "address 2 should be of minimum 10 characters length")
-      .required("address 2 is required"),
+
     city: yup
       .string()
       .min(5, "city should be of minimum 5 characters length")
@@ -65,7 +62,11 @@ export const AddressForm: React.FC<Props> = ({
     phoneNumber: yup
       .string()
       .min(3, "phone number should be of minimum 3 characters length")
-      .required("email is required"),
+      .required("email is required")
+      .matches(
+        /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
+        "Phone number is not valid"
+      ),
   });
 
   const formik = useFormik({
@@ -73,7 +74,6 @@ export const AddressForm: React.FC<Props> = ({
       firstName: "",
       lastName: "",
       address1: "",
-      address2: "",
       city: "",
       state: "",
       zip: "",
@@ -174,21 +174,6 @@ export const AddressForm: React.FC<Props> = ({
               onChange={formik.handleChange}
               error={formik.touched.address1 && Boolean(formik.errors.address1)}
               helperText={formik.touched.address1 && formik.errors.address1}
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <TextField
-              id="address2"
-              name="address2"
-              label="Address line 2"
-              fullWidth
-              autoComplete="shipping address-line2"
-              variant="standard"
-              value={formik.values.address2}
-              onChange={formik.handleChange}
-              error={formik.touched.address2 && Boolean(formik.errors.address2)}
-              helperText={formik.touched.address2 && formik.errors.address2}
             />
           </Grid>
 
